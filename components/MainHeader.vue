@@ -19,5 +19,5 @@
 <script setup>
 import { useSiteData } from '../compositions/UseSiteData';
 
-const { data, pending } = await useSiteData();
+const { data } = await useSiteData();
 </script>
