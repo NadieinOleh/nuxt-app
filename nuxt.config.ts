@@ -9,5 +9,9 @@ export default defineNuxtConfig({
   plugins: ['~/plugins/bootstrap.js'],
   modules: [
     'vue3-carousel-nuxt'
-  ]
+  ],
+  app: {
+    baseURL: '/nuxt-github-pages/', 
+    buildAssetsDir: 'assets',
+  }
 });
