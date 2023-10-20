@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     'vue3-carousel-nuxt'
   ],
   app: {
-    baseURL: '/nuxt-github-pages/', 
+    baseURL: '/nuxt-app/', 
     buildAssetsDir: 'assets',
   }
 });
