@@ -1,0 +1,1 @@
+import{M as o,c as s,t as a,P as t,o as r}from"./entry.18d23527.js";const n={class:"flex-grow-1"},_={__name:"[id]",setup(i){return o(),(e,c)=>(r(),s("main",n," event id: "+a((e._.provides[t]||e.$route).params.id),1))}};export{_ as default};
