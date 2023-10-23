@@ -1,11 +1,11 @@
 <template>
   <section>
-    <h2 class="text-center mb-3 mb-lg-5">{{ title }}</h2>
+    <h2 class="text-center mb-3 mb-lg-5">{{ data.testTaskSlidesBlockTitle }}</h2>
 
     <carousel :items-to-show="1">
       <slide
         class="carousel-item"
-        v-for="(item, index) in parsedList"
+        v-for="(item, index) in JSON.parse(data.testTaskSlidesBlockSlides)"
         :key="item.key"
         :class="{ active: index === 0 }"
       >
@@ -39,11 +39,6 @@ import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
 import { useSiteData } from '../compositions/UseSiteData.vue';
 
 const { data } = await useSiteData();
-
-const title = data._value ? data._value.testTaskSlidesBlockTitle : '';
-const list = data._value ? data._value.testTaskSlidesBlockSlides : '';
-
-const parsedList = list !== '' ? JSON.parse(list) : [];
 </script>
 
 <style>

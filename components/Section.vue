@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2 class="m-0 mb-lg-5 mb-md-4 p-0">{{ title }} </h2>
-    <div class="container-md" v-for="(item, index) in parsedList" :key="item.key">
+    <h2 class="m-0 mb-lg-5 mb-md-4 p-0">{{ data.testTaskSecondBlockTitle }} </h2>
+    <div class="container-md" v-for="(item, index) in JSON.parse(data.testTaskSecondDescriptiveBlockItems)" :key="item.key">
       <div class="row mb-5">
         <div
           v-if="index === 0 || index === 2"
@@ -39,12 +39,6 @@
 import { useSiteData } from '../compositions/UseSiteData';
 
 const { data } = await useSiteData();
-
-
-const title = data._value ? data._value.testTaskSecondBlockTitle : '';
-const list = data._value ? data._value.testTaskSecondDescriptiveBlockItems : '';
-
-const parsedList = list !== '' ? JSON.parse(list) : [];
 </script>
 
 <style>

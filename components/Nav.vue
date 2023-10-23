@@ -1,12 +1,12 @@
 <template>
-  <h3 class="mb-3">{{ title }}</h3>
-  <ListNav :isRow="false" />
-
+  <div>
+    <h3 class="mb-3">{{ data.testTaskSecondBlockSideNavigationTitle }}</h3>
+    <ListNav :isRow="false" />
+  </div>
 </template>
 
 <script setup>
 import { useSiteData } from '../compositions/UseSiteData';
 
 const { data } = await useSiteData();
-const title = data._value.testTaskSecondBlockSideNavigationTitle
 </script>
