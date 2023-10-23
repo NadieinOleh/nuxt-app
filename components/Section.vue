@@ -1,6 +1,5 @@
 <template>
-  <div v-if="pending">loading</div> 
-  <div v-else>
+  <div>
     <h2 class="m-0 mb-lg-5 mb-md-4 p-0">{{ title }} </h2>
     <div class="container-md" v-for="(item, index) in parsedList" :key="item.key">
       <div class="row mb-5">

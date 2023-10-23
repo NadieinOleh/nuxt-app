@@ -38,8 +38,7 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
 import { useSiteData } from '../compositions/UseSiteData.vue';
 
-const { data, pending } = await useSiteData();
-console.log(pending);
+const { data } = await useSiteData();
 
 const title = data._value ? data._value.testTaskSlidesBlockTitle : '';
 const list = data._value ? data._value.testTaskSlidesBlockSlides : '';
